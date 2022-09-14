@@ -18,78 +18,78 @@ links.forEach((link) => {
   });
 });
 
-coaches = [
+const coaches = [
   {
     image: {
-      url:'asset/coaches/IMG1.jpg',
-      alt:'Aniebiet Otung',
+      url: 'asset/coaches/IMG1.jpg',
+      alt: 'Aniebiet Otung',
     },
     name: 'Aniebiet Otung',
     status: 'Small forward at Kano Pillars in the NBBF',
-    info: 'Aniebiet Otung is a well decourated player of the Kano pillars,annually he partakes in camps to spread the culture.'
+    info: 'Aniebiet Otung is a well decourated player of the Kano pillars,annually he partakes in camps to spread the culture.',
   },
   {
     image: {
-      url:'asset/coaches/IMG2.jpg',
-      alt:'Richard Eton',
+      url: 'asset/coaches/IMG2.jpg',
+      alt: 'Richard Eton',
     },
     name: 'Richard Eton',
     status: 'Assistant Coach of the AkwaIbom State team',
-    info: 'Sir Richard has been coaching for 9 years and has a keen eye for youths at game of basketball.'
+    info: 'Sir Richard has been coaching for 9 years and has a keen eye for youths at game of basketball.',
   },
   {
     image: {
-      url:'asset/coaches/IMG3.jpg',
-      alt:'Emaimo Orok',
+      url: 'asset/coaches/IMG3.jpg',
+      alt: 'Emaimo Orok',
     },
     name: 'Emaimo Orok',
     status: 'Retired NBA player of the Miami Heat',
-    info: 'Emaimo Orok is a well decorated athlete, he retired 2 years ago, curently he annualy hosts basketball camp clinics accross the nation.'
+    info: 'Emaimo Orok is a well decorated athlete, he retired 2 years ago, curently he annualy hosts basketball camp clinics accross the nation.',
   },
   {
     image: {
-      url:'asset/coaches/IMG4.jpg',
-      alt:'David Enyedok',
+      url: 'asset/coaches/IMG4.jpg',
+      alt: 'David Enyedok',
     },
     name: 'David Enyedok',
     status: '3 time NBA Dunk champion',
-    info: 'David famously known as <b>P Harmony</b> is well known accross the state for his generous contributions to the growth of basketball.'
+    info: 'David famously known as <b>P Harmony</b> is well known accross the state for his generous contributions to the growth of basketball.',
   },
   {
     image: {
-      url:'asset/coaches/IMG5.jpg',
-      alt:'Daniel King',
+      url: 'asset/coaches/IMG5.jpg',
+      alt: 'Daniel King',
     },
     name: 'Daniel King',
     status: 'Shooting guard at the Utah Jazz',
-    info: 'Daniel King just recently got drafted to the Utah Jazz, still he creates time for this because he is enthusiastic about giving to the society.'
+    info: 'Daniel King just recently got drafted to the Utah Jazz, still he creates time for this because he is enthusiastic about giving to the society.',
   },
   {
     image: {
-      url:'asset/coaches/IMG6.jpg',
-      alt:'Ukponobong Ekwere',
+      url: 'asset/coaches/IMG6.jpg',
+      alt: 'Ukponobong Ekwere',
     },
     name: 'Ukponobong Ekwere',
     status: 'Point guard at the Rivers Hoopers',
-    info: 'Ukponobong popularly known as <b>Cj</b>, is currently the lead scorer in 3pt shooting in the league. <b>Cj</b> regulaly partakes in basketball camps to promote the culture'
+    info: 'Ukponobong popularly known as <b>Cj</b>, is currently the lead scorer in 3pt shooting in the league. <b>Cj</b> regulaly partakes in basketball camps to promote the culture',
   },
   {
     image: {
-      url:'asset/coaches/IMG7.jpg',
-      alt:'Etubom Smith',
+      url: 'asset/coaches/IMG7.jpg',
+      alt: 'Etubom Smith',
     },
     name: 'Etubom Smith',
     status: 'Assistant coach at Cobra Sport team OF the BAL',
-    info: 'Smith has developed effective drills and schedules that have improved the overall performance of athletes generally his knowledge in sport science is a great asset'
+    info: 'Smith has developed effective drills and schedules that have improved the overall performance of athletes generally his knowledge in sport science is a great asset',
   },
   {
     image: {
-      url:'asset/coaches/IMG8.jpg',
-      alt:'Ikon Usirusen',
+      url: 'asset/coaches/IMG8.jpg',
+      alt: 'Ikon Usirusen',
     },
     name: 'Ikon Usirusen',
     status: 'Point guard at Memphis team of the NCAA',
-    info: 'Usirusen Ikon recently joined the Memphis team of the NCAA college basketball league'
+    info: 'Usirusen Ikon recently joined the Memphis team of the NCAA college basketball league',
   },
 ];
 
@@ -112,8 +112,8 @@ function loadCoaches() {
         <span class="c-summary">${card.info}</span>
       </p>
     </div>
-  </div>`
-  })
+  </div>`;
+  });
 }
 
 loadCoaches();
@@ -158,7 +158,7 @@ function LoadModal() {
     </div>
     <button class="reg-btn" type="submit">Register</button>
     <i class="error msg"></i>
-  </form>`
+  </form>`;
 }
 
 joinLink.addEventListener('click', () => {
@@ -172,16 +172,13 @@ joinLink.addEventListener('click', () => {
     modalFilter.classList.remove('open');
     modal.classList.remove('open');
     body.classList.remove('overflow');
-  })
-
-  console.log('click');
-})
+  });
+});
 
 const form = document.querySelector('.form');
 const formEmail = document.querySelector('#user-email');
 const error = document.querySelector('.error');
 const formName = document.querySelector('#user-name');
-
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -207,4 +204,3 @@ window.addEventListener('DOMContentLoaded', () => {
     formEmail.value = data.email;
   }
 });
-
