@@ -161,8 +161,9 @@ function LoadModal() {
   </form>`;
 }
 
+LoadModal();
+
 joinLink.addEventListener('click', () => {
-  LoadModal();
   modalFilter.classList.toggle('open');
   modal.classList.toggle('open');
   body.classList.toggle('overflow');
@@ -182,7 +183,6 @@ const formName = document.querySelector('#user-name');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-
   if (formEmail.value !== formEmail.value.toLowerCase()) {
     error.classList.add('msg');
     error.innerHTML = 'Invalid Email Address';
