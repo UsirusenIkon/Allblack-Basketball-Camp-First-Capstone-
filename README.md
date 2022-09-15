@@ -6,7 +6,7 @@
   is built with html, css and javascript..
 
 
-## <a href="">Live Demo</a>
+## <a href="https://usirusenikon.github.io/Allblack-Basketball-Camp-First-Capstone-/">Live Demo</a>
 
    The objectives of this project is to:
 
@@ -81,4 +81,4 @@
 
 
 ## 📝 License
-    - This project is [MIT](https://github.com/UsirusenIkon/Portfolio/blob/feature/LICENSE) licensed.
+   - This project is [MIT](https://github.com/UsirusenIkon/Portfolio/blob/feature/LICENSE) licensed.
