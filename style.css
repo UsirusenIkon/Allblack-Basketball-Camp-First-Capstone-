@@ -375,6 +375,12 @@ h2::after {
   background-color: #d3d3d32f;
   padding: 2rem;
   border-radius: 4px;
+  transition: 0.3s ease-in-out;
+}
+
+.p-cards:hover {
+  transform: scale(1.05);
+  border: 2px solid var(--tetiary-color);
 }
 
 .p-icon {
@@ -441,7 +447,7 @@ h2::after {
     padding: 1rem;
     margin: 0.2rem;
     width: 8rem;
-    height: 14rem;
+    height: 12rem;
   }
 
   .program-btn {
@@ -462,6 +468,8 @@ h2::after {
 .coach-cards {
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 50rem;
+  align-self: center;
 }
 
 .c-card {
@@ -538,6 +546,11 @@ h2::after {
 @media screen and (min-width: 766px) {
   .more-btn {
     display: none;
+  }
+
+  .coach-cards {
+    gap: 2rem;
+    column-gap: 7rem;
   }
 
   .c-summary {
