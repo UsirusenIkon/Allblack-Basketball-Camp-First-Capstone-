@@ -128,6 +128,32 @@ span {
   border: 1.5px solid var(--primary-color-);
   border-radius: 10px;
   margin: 0 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+  animation: pulsate-bck 0.5s ease-in-out infinite;
+}
+
+.logo:active {
+  scale: 0.7;
+}
+
+@keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
 .nav-menu {
@@ -157,6 +183,7 @@ span {
 
 .campaign {
   border: 4px solid var(--secondary-color);
+  border-radius: 9px;
   padding: 0.8rem;
   width: fit-content;
 }
@@ -178,7 +205,7 @@ span {
     height: 100vh;
     width: 70%;
     top: -2.6%;
-    right: -150%;
+    right: -100%;
     backdrop-filter: blur(6px);
     border: 4px solid rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0.674);
@@ -205,6 +232,11 @@ span {
     letter-spacing: 1px;
     font-size: 1.5rem;
     font-weight: 600;
+  }
+
+  .campaign {
+    border: none;
+    padding: 0;
   }
 
   .red {
@@ -379,8 +411,7 @@ h2::after {
 }
 
 .p-cards:hover {
-  transform: scale(1.05);
-  border: 2px solid var(--tetiary-color);
+  transform: translateY(-5px);
 }
 
 .p-icon {
@@ -504,6 +535,12 @@ h2::after {
   width: 5rem;
   z-index: 100;
   border-bottom-right-radius: 10px;
+  transition: 0.4s ease-in-out;
+}
+
+.c2-img:hover {
+  width: 6rem;
+  border-radius: 10px;
 }
 
 .c-content {
@@ -559,18 +596,56 @@ h2::after {
   }
 }
 
+/* $-partner-$ */
+.partner {
+  background-color: var(--primary-color-);
+}
+
+.h1-p {
+  color: var(--tetiary-color);
+}
+
+.partner-logo {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  height: auto;
+  margin: 1rem;
+  transition: 0.2s ease-in-out;
+}
+
+.icons:hover {
+  transform: scale(1.1);
+}
+
+.partner0 {
+  width: 7rem;
+}
+
+.partner1 {
+  width: 4.9rem;
+  border-radius: 50%;
+}
+
+.partner2 {
+  width: 4.7rem;
+  border-radius: 50%;
+}
+
+.partner3 {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.partner4 {
+  width: 7rem;
+}
+
 /* \------------------ $-about-page-$ --------------\ */
-.body {
-  text-align: center;
-}
-
-.h-content {
-  /* stylelint-disable-next-line csstree/validator */
-  padding-left: 1;
-}
-
 .about-section {
-  text-align: center;
   position: relative;
   z-index: 500;
   padding: 9rem 1rem 4rem 1rem;
@@ -579,18 +654,29 @@ h2::after {
   background-repeat: no-repeat;
 }
 
+.h-content {
+  /* stylelint-disable-next-line csstree/validator */
+  padding-left: 1;
+  text-align: center;
+}
+
 .h-span {
   margin-bottom: 0.5rem;
 }
 
 .about-info {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   background-image: none;
   border: 2px solid var(--tetiary-color);
+  border-radius: 9px;
 }
 
 .a-link {
   text-decoration: underline;
+}
+
+.about-logo {
+  text-align: center;
 }
 
 @media screen and (min-width: 766px) {
@@ -617,6 +703,7 @@ h2::after {
   max-width: 17rem;
   width: 100%;
   margin: 0 auto;
+  border-radius: 9px;
 }
 
 .ab-summits {
@@ -642,6 +729,7 @@ h2::after {
   height: 6.68rem;
   font-size: small;
   font-weight: 600;
+  border-radius: 9px;
 }
 
 .sp-date {
@@ -653,6 +741,7 @@ h2::after {
   max-width: 17rem;
   width: 100%;
   background-color: #ec5242;
+  border-radius: 9px;
 }
 
 @media screen and (min-width: 766px) {
@@ -669,49 +758,6 @@ h2::after {
     width: 20rem;
     height: 8.3rem;
   }
-}
-
-/* $-partner-$ */
-.partner {
-  background-color: var(--primary-color-);
-}
-
-.h1-p {
-  color: var(--tetiary-color);
-}
-
-.partner-logo {
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.icons {
-  height: auto;
-  margin: 1rem;
-}
-
-.partner0 {
-  width: 7rem;
-}
-
-.partner1 {
-  width: 4.9rem;
-  border-radius: 50%;
-}
-
-.partner2 {
-  width: 4.7rem;
-  border-radius: 50%;
-}
-
-.partner3 {
-  width: 5rem;
-  border-radius: 50%;
-}
-
-.partner4 {
-  width: 7rem;
 }
 
 /* $-footer-$ */
@@ -779,16 +825,17 @@ h2::after {
 
 .modal {
   background-image: url('asset/aboutlogo.jpeg');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: 50% 70%;
+  background-color: #dfdbdb;
+  background-position: 50% 53%;
   position: relative;
-  top: 40%;
+  top: 30%;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
   padding: 1rem;
-  width: 20rem;
+  max-width: 20rem;
   text-align: center;
   font-weight: 800;
   font-size: large;
@@ -822,7 +869,7 @@ h2::after {
 .wf {
   border-radius: 10px;
   width: 14rem;
-  height: 2rem;
+  height: 2.5rem;
   margin-bottom: 1rem;
   border: none;
   font-size: 1rem;
@@ -839,7 +886,7 @@ h2::after {
 }
 
 .reg-btn {
-  margin: 0 auto;
+  margin: 7px auto 0 auto;
   width: 5rem;
   padding: 0.5em;
   border-radius: 10px;
@@ -887,4 +934,21 @@ h2::after {
 .bx-x:hover {
   transform: scale(1.3);
   color: var(--secondary-color);
+}
+
+@media screen and (min-width: 766px) {
+  .modal {
+    max-width: 36rem;
+    height: 15rem;
+    background-position: 50% 0.5rem;
+  }
+
+  .wf {
+    height: 2.5rem;
+    width: 15rem;
+  }
+
+  .error {
+    left: 32%;
+  }
 }
