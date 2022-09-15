@@ -1,9 +1,17 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 ## Allblack-Basketball-Camp-First-Capstone-
-  This is a website for a basketbal summer camp where clients can register and have
-  full details about the program. The website is fully responsive across devices and
-  is built with html, css and javascript..
+  
+## Description 
+   This Capstone project is a website for a basketbal summer camp where clients can register and have
+   full details about the program. The website is fully responsive across devices and
+   is built with html, css and javascript..
+
+   - This is the page view:
+   
+> |     | Mobile version                             | Desktop version                            |     |
+> | --- | ------------------------------------------ | -------------------------------------------| --- |
+> |     | ![screenshot](asset/mobile-shot.png)       | ![screenshot](asset/desktop-shot.png)|     |
 
 
 ## <a href="https://usirusenikon.github.io/Allblack-Basketball-Camp-First-Capstone-/">Live Demo</a>
