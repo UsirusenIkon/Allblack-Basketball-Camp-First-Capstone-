@@ -16,6 +16,8 @@
 
 ## <a href="https://usirusenikon.github.io/Allblack-Basketball-Camp-First-Capstone-/">Live Demo</a>
 
+## <a href="https://www.loom.com/share/8ead9492ecf443279b364db2ec357f26">Loom Video</a>
+
    The objectives of this project is to:
 
   - Use semantic HTML tags.
