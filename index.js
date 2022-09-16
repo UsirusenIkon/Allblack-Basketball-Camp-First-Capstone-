@@ -97,7 +97,7 @@ const coachCards = document.querySelector('.coach-cards');
 
 function loadCoaches() {
   coaches.forEach((card) => {
-    coachCards.innerHTML += `
+    coachCards.innerHTML += ` 
     <div class="c-card flex">
     <div>
       <div class="c-images margin">
@@ -204,3 +204,17 @@ window.addEventListener('DOMContentLoaded', () => {
     formEmail.value = data.email;
   }
 });
+
+
+const viewBtn = document.querySelector('.more-btn');
+
+viewBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  if (coachCards.classList.contains('view')) {
+    viewBtn.innerHTML = `Less<i class='bx bx-chevron-up'></i> `
+  } else {
+    viewBtn.innerHTML = `More<i class='bx bx-chevron-down'></i>`;
+  }
+  coachCards.classList.toggle('view')
+})
