@@ -205,16 +205,15 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
 const viewBtn = document.querySelector('.more-btn');
 
 viewBtn.addEventListener('click', (e) => {
   e.preventDefault();
 
   if (coachCards.classList.contains('view')) {
-    viewBtn.innerHTML = `Less<i class='bx bx-chevron-up'></i> `
+    viewBtn.innerHTML = 'Less<i class=\'bx bx-chevron-up\'></i> ';
   } else {
-    viewBtn.innerHTML = `More<i class='bx bx-chevron-down'></i>`;
+    viewBtn.innerHTML = 'More<i class=\'bx bx-chevron-down\'></i>';
   }
-  coachCards.classList.toggle('view')
-})
+  coachCards.classList.toggle('view');
+});
