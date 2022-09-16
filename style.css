@@ -131,10 +131,6 @@ span {
   transition: 0.3s ease-in-out;
 }
 
-.logo:hover {
-  animation: pulsate-bck 0.5s ease-in-out infinite;
-}
-
 .logo:active {
   scale: 0.7;
 }
@@ -154,6 +150,15 @@ span {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+}
+
+.bar {
+  width: 1.8rem;
+  height: 1.2rem;
+  margin: 2px;
+  border-radius: 2px;
+  background-color: var(--primary-color-);
+  transition: all 0.7s ease;
 }
 
 .nav-menu {
@@ -188,13 +193,24 @@ span {
   width: fit-content;
 }
 
-.bar {
-  width: 1.8rem;
-  height: 1.2rem;
-  margin: 2px;
-  border-radius: 2px;
-  background-color: var(--primary-color-);
-  transition: all 0.7s ease;
+.pnav {
+  position: relative;
+}
+
+.pnav-menu-icons {
+  position: absolute;
+  left: -2.5rem;
+  width: 100%;
+}
+
+.pnav-icons {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-right: 1rem;
+}
+
+.pnav-icons:active {
+  transform: scale(1.2);
 }
 
 @media screen and (max-width: 768px) {
@@ -204,6 +220,7 @@ span {
     flex-direction: column;
     height: 100vh;
     width: 70%;
+    padding: 0;
     top: -2.6%;
     right: -100%;
     backdrop-filter: blur(6px);
@@ -224,7 +241,7 @@ span {
   .nav-menu-item {
     position: relative;
     top: 2rem;
-    margin: 2.5rem 1rem;
+    margin: 1.8rem 1rem;
   }
 
   .nav-menu-link {
@@ -291,6 +308,14 @@ span {
 
   .logo {
     padding-left: 0.6rem;
+  }
+
+  .logo:hover {
+    animation: pulsate-bck 0.5s ease-in-out infinite;
+  }
+
+  .pnav-menu-icons {
+    display: none;
   }
 }
 
@@ -457,7 +482,7 @@ h2::after {
   margin: 3rem;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 355px) {
   .p-cards {
     flex-direction: column;
     text-align: center;
@@ -501,6 +526,7 @@ h2::after {
   justify-content: center;
   max-width: 50rem;
   align-self: center;
+  transition: 0.7s ease-in-out;
 }
 
 .c-card {
@@ -559,7 +585,7 @@ h2::after {
 
 .more-btn {
   margin: 1rem auto;
-  padding: 0.7em 2em;
+  padding: 0.3em 2em;
   font-size: 1rem;
   align-items: center;
   color: var(--primary-color-);
@@ -576,8 +602,20 @@ h2::after {
   color: var(--tetiary-color);
 }
 
+.more-btn:active {
+  transform: scale(0.5);
+}
+
 .bx-chevron-down {
   font-size: 2rem;
+}
+
+@media screen and (max-width: 766px) {
+  .coach-cards.view {
+    overflow: hidden;
+    line-height: 1em;
+    height: 15rem;
+  }
 }
 
 @media screen and (min-width: 766px) {
@@ -599,6 +637,7 @@ h2::after {
 /* $-partner-$ */
 .partner {
   background-color: var(--primary-color-);
+  padding-bottom: 2rem;
 }
 
 .h1-p {
@@ -613,7 +652,7 @@ h2::after {
 
 .icons {
   height: auto;
-  margin: 1rem;
+  margin: 2rem;
   transition: 0.2s ease-in-out;
 }
 
@@ -714,7 +753,7 @@ h2::after {
 
 .red-overlay {
   position: relative;
-  margin: 0.5rem;
+  margin: 2.5rem 1rem;
 }
 
 .img-txt {
